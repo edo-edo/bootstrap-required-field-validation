@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Form-validation</title>
+</head>
+<body>
+    <div class="container mt-4">
+        <div id="info">
+
+        </div>
+    <form id="form">
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="name">First name</label>
+            <input type="text" class="form-control" id="name" placeholder="First name">
+            <div> 
+
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="last">Last name</label>
+            <input type="text" class="form-control" id="last" placeholder="Last name"  >
+            <div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="email">Email</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend3">@</span>
+              </div>
+              <input type="text" class="form-control " id="emali" placeholder="email" aria-describedby="inputGroupPrepend3" >
+              <div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="city">City</label>
+            <input type="text" class="form-control" id="city" placeholder="City" >
+            <div>
+              
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="state">State</label>
+            <input type="text" class="form-control" id="state" placeholder="State" >
+            <div>
+              
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-primary" type="submit" id="btn">Submit</button>
+      </form>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
