@@ -4,6 +4,11 @@ class validForm {
         sib.className = 'valid-feedback';
         sib.innerHTML = 'Looks good!';
     }
+    invalidEmailInput(input, sib){
+        input.className = "form-control is-invalid";
+        sib.className = 'invalid-feedback';
+        sib.innerHTML = 'please enter valid email address!';
+    }
     invalidInput(input, sib) {
         input.className = "form-control is-invalid";
         sib.className = 'invalid-feedback';
@@ -36,6 +41,13 @@ btn.addEventListener('click', (e) => {
     const input = document.querySelectorAll('input');
     input.forEach((field) => {
         if (field.value !== '') {
+            if (field.id === "emali"){
+                let check = field.value.includes("@",0);
+                if (field.value.length < 3 || !check){
+                    valid.invalidEmailInput(field, field.nextElementSibling);
+                    return;
+                }
+            }
             c++;
             valid.validInput(field, field.nextElementSibling);
         } else {
