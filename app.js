@@ -9,6 +9,11 @@ class validForm {
         sib.className = 'invalid-feedback';
         sib.innerHTML = 'please enter valid email address!';
     }
+    notEnterOneSimbol(input, sib){
+        input.className = "form-control is-invalid";
+        sib.className = 'invalid-feedback';
+        sib.innerHTML = 'please enter more than one character';
+    }
     invalidInput(input, sib) {
         input.className = "form-control is-invalid";
         sib.className = 'invalid-feedback';
@@ -43,8 +48,16 @@ btn.addEventListener('click', (e) => {
         if (field.value !== '') {
             if (field.id === "emali"){
                 let check = field.value.includes("@",0);
-                if (field.value.length < 3 || !check){
+                let size = field.value.length;
+                if (size < 3 || !check){
                     valid.invalidEmailInput(field, field.nextElementSibling);
+                    return;
+                }
+            }
+            if (field.id === "last"){
+                let lastsize = field.value.length;
+                if (lastsize === 1){
+                    valid.notEnterOneSimbol(field, field.nextElementSibling);
                     return;
                 }
             }
